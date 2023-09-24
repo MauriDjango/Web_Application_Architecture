@@ -1,10 +1,6 @@
 # Exploring the Fundamentals of Web Development in Client-Side Environments
 
 ## Web Application Architecture
--How does it work?
--What apps use this architecture?
--What does it provide?
--Review each architecture individually
 
 Web Application Architecture refers to the overall structure of the software components that make up a web application i.e. 
 applications, databases, and middleware (helps control the communication between components). The different architectures 
@@ -67,11 +63,11 @@ is being loaded. This is pre-external resources
     - **User Interactions**, event handlers can be added to HTML elements to respond to user actions such as clicking buttons, hovering,
 or submitting forms.
 - **Timers and Intervals** - JS can be set to execute at a certain time or after a certain period.
-- **Asynchronous Operations** [ Tasks that can be executed independently of the main program flow, such as HTTP requests or handling data received from
+- **Asynchronous Operations** - Tasks that can be executed independently of the main program flow, such as HTTP requests or handling data received from
 external sources allowing the UX (User Experience) to remain smooth and not block the main program execution.
 
 > JavaScript is the most common and widely used scripting language for client-side development
-and is the default language for web browsers however not the only one.
+and is the default language for web browsers, however it is not the only one.
 
 ### Are all browsers compatible with the same web application?
 All major browsers strive to be compliant with standards set by both the W3C (World Wide Web Consortium) and the WHATWG
@@ -83,7 +79,7 @@ lead to compatability issues.
 - **JS APIs** - Browsers can differ on the level of support they have for certain APIs. If the application depends on these
 APIs for functionality special care must be taken to ensure compatability.
 - **Experimental CSS** - To incorporate some experimental css properties browsers may require different prefixes to 
-- **Web Components** - Similar to JS API's support web components can vary among different browsers and should be tested
+- **Web Components** - Similar to JS APIs support web components can vary among different browsers and should be tested
 for compatability
 
 ### Ways to avoid compatability issues
@@ -105,7 +101,7 @@ some compile to their own language.
 
 | **Language**    | **JavaScript**                                                                                                                                                                                                                        | **TypeScript**                                                                                                                                                                      | **Dart**                                                                                                                                                                                                                                                                                        |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Description** | The primary and most used. Adds dynamic and interactive behavior                                                                                                                                                                      | A superset of JavaScript that is statically  typed boating a rich ecosystem  extending JS pre-exisitng ecosystem                                                                    | Developed by google to be used  with the flutter framework to develop  cross-platform and web applications disitnguishing itself by haaving  the option to be compiled ahead of time (AOT) or just in time (JIT)                                                                                |
+| **Description** | The primary and most used. Adds dynamic and interactive behavior                                                                                                                                                                      | A superset of JavaScript that is statically  typed boating a rich ecosystem  extending JS pre-existing ecosystem                                                                    | Developed by google to be used  with the flutter framework to develop  cross-platform and web applications distinguishing itself by having  the option to be compiled ahead of time (AOT) or just in time (JIT)                                                                                 |
 | **Language**    | **WebAssembly**                                                                                                                                                                                                                       | **Elm**                                                                                                                                                                             | **Swift**                                                                                                                                                                                                                                                                                       |
 | **Description** | Though not a language in itself it provides the ability to  program client-side in languages such as C/C++, Rust, and  AssemblyScript being compiled to low-level code that can be  executed directly in the browsers virtual machine | Compiled to JS Elm is a statically typed functional programming  language/front-end framework. Its focuses is on correct typing and  reliability helping prevent errors at runtime. | Made for the apply ecosystem, Swift is designed to be easy to have a  concise syntax and prevent type issues with it's strong type safety. Although originally being for iOS it can now be used for server-side programming and cross-platform programming thanks to open-source contributions. |
 
@@ -136,10 +132,88 @@ interpreted you wouldn't have to first compile the entire application to test th
 ## Client-Side Technologies and Associated Languages
 
 ### CSS
+CSS is a styling language used to describe how HTML should appear on a web page. It has the capacity to control the color, font,
+visual style, and layout of the elements. Having these aspects controlled by CSS instead of HTML helps separate what would
+be the structure of the web page from the presentations, helping the code be more maintainable and easier to modify.
+
 ### HTML5
+HTML is a markup language used to control the structure of a web page. Similar to the idea of CSS, which controls the styling 
+separate from structure, HTML does the exact opposite, controlling the structure separately from the rest of the code 
+ensuring maintainability and adaptability. The most recent version of HTML, HTML5 expanded on the capabilities of HTML4. 
+Some new features included in HTML5 are native multimedia support, expanded elements, geolocation API, and local and 
+session storage to name a few.
+
 ### JavaScript
+JavaScript is a scripting language used to add functionality and interactivity to a web page. Running under the structure
+provided by HTML, JS allows manipulation of the Document Object Model, handle and direct user interactions, and make asynchronous
+requests to servers.
+
 ### JQuery
+Is a lightweight JS library that simplifies manipulation of the DOM model, event handling, and AJAX interactions. It maintains
+compatability across browsers, letting developers write quick adn concise code for common JS tasks.
+
 ### DOM
+Document Object Model is an interface that is created by the browser engine once it receives the relevant information from
+the server. It houses and represents the structure of an HTML or XML file as a tree facilitating the manipulation of it by
+JavaScript. Having this also allows developers to control when and how the data is modified and presented aiding  in the 
+development of interactive and dynamic web pages.
+
 ### AJAX
+Asynchronous JavaScript and XML is a set of techniques that allows applications to make requests to servers independently 
+of the main program. Making the requests in the background of the application allows data to be updated without the necessity
+of refreshing the entire page. You can imagine how much this lends to maintaining fluid interaction and functioning of a web 
+page, preserving and maintaining the user experience.
+
 ### Front-End Framework
+Nowadays, very rarely will you hear a conversation about applications without also hearing frameworks. The reason being
+that in reality frameworks are collections of reusable elements destined towards aiding the fast and efficient development
+of applications. These frameworks contain UI components, libraries, tools, and layouts to heal streamline web development.
+Some of the most popular currently being React, Vue, and Angular.
+
 ### Web Components
+Web platform Application Programming Interface nad technologies like ES Modules (ECMAScript Modules) and component libraries
+group together to form web components. With these web components developers and create custom HTML elements with their own
+particular behavior adn styling. This helps promote component based architecture leading to more modular and maintainable 
+web applications
+
+## Programming Tools
+
+Thankfully things have advanced and developers don't have to make entire applications through the command console alone. 
+We now have more advanced and user-friendly tools.
+
+#### IDE
+Integrated Development Environments combine several capabilities such as text editing, debugging, building, testing, and
+packaging all into one application. Visual Studio Code, WebStorm, and IntelliJ are all prime examples.
+
+#### Version Control
+This is essential. Version control allows developers to track and maintain changes made to an application. They can also
+check out and modify certain versions of an application to be able te develop and make changes to later reincorporate, giving time
+and space to est for compatability and any issues that could arise from the changes made. Any issues or errors found can 
+always be rectified by returning to a previous stable version and from that point continuing forward whilst correcting errors.
+Git would be an example, it is everywhere and it is all-seeing.
+
+#### Browser Testing
+Since there are difference in compatability among browsers browser testing is a crucial part of the development process. 
+Features developed in the environment of a specific browser may work fine there but once it moves away from home to a different
+browser unexpected behavior or irregularities could crop-up. To prevent this browser testing tools such as selenium aid 
+in the testing of application functionality across a number of browsers.
+
+#### Browser Development tools
+
+These are built in features in a browser that help developers inspect, debug, and optimize web applications.
+Features such as the debugger panel that allow developer to set breakpoints and step through code. Network panels that 
+help keep track of requests made by a web page. As well as the elements panel that allows developers to inspedct and manipulate
+the DOM structure in real time to keep track of changes and effects.
+
+## Bibliography
+
+Web Application Architecture - https://contentsnare.com/web-application-architecture/
+Web Application Architecture - https://kinsta.com/es/blog/arquitectura-aplicaciones-web/#tipos-de-arquitectura-de-aplicaciones-web
+Web Application Architecture - https://www.scnsoft.com/blog/web-application-architecture#key-terms
+Web Application Architecture - https://www.clickittech.com/devops/web-application-architecture/
+Web Application Architecture - https://thinksys.com/development/web-application-architecture-complete-guide/
+Browser Code Execution - https://medium.com/tech-desk/browsers-and-their-working-mechanisms-33a6a6e3a681
+Browser Compatability - https://www.omniconvert.com/what-is/browser-compatibility/
+Scripting Languages vs Traditional Languages - https://www.unosquare.com/blog/scripting-and-programming-languages-differences-advantages-and-optimal-use-cases/
+Client-Side Web Technologies - https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-client-side-web-technologies
+Client-Side Web Technologies - https://docs.oracle.com/cd/E13218_01/wlp/docs102/clientdev/ria.html

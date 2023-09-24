@@ -1,0 +1,76 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/background.jpg'); /* Background image example */
+    background-size: cover; /* Adjust background size as needed */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slide styles */
+section {
+    padding: 20px;
+    justify-content: left;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+h2 {
+    color: #8665FC;
+    font-size: 30px;
+}
+
+h3 {
+    color: #9C5AE0;
+    font-size: 24px;
+}
+
+p {
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+li {
+    color: #777;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* Header styles */
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Link styles */
+a {
+    color: #007acc;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #005c99;
+}
+
+/* Code block styles (customize as needed) */
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+slide {
+    background-color: #D86FF7; /* Replace with your desired background color */
+}
