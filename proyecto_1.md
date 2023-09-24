@@ -8,6 +8,8 @@ control how the information is passed between the different components and layer
 data verification. The architecture chosen is a crucial decision as it will influence the scalability, reliability, security,
 maintenance, and expandability of an application.
 
+![Picture did not load](/img/architecture_model.jpg)
+
 ### Types of Web App Architectures
 
 #### - Legacy Web Applications
@@ -15,14 +17,27 @@ Coming from and older generation of webpages and becoming slowly more and more o
 Legacy Web Apps. In the structure of these apps the entirety of the web page construction logic is stored in the server 
 and every time the client wishes to interact with the page they send out a complete HTML page to a server. The server in
 turn receives this request and sends back the entire updated HTML. This forces the client tot have to reload the entire
-page each time for each update that is made.
+page each time for each update that is made. 
+
+Some examples would be some government websites, educational platforms, and blogging platforms
+
+![Picture did not load](/img/legacy_app.png)
+
+Image credit to https://www.scnsoft.com/blog/web-application-architecture#key-terms
 
 #### - Single Page Applications 
 One of the most popular architectures in use today would be Single Page Apps. As opposed to Legacy Web Apps, the entire 
 page is only downloaded once whilst a layer a JavaScript communicate with the web services and makes real-time updates 
 to the page. This reduces the amount of data needing to be transferred to a minimum.
 Due to its structure its offers a high degree of agility, responsiveness, and is lightweight, lending itself well to 
-being converted into mobile applications. The goal of this architecture is to offer and smooth and seamless user experience
+being converted into mobile applications. The goal of this architecture is to offer and smooth and seamless user experience.
+
+
+Airbnb, twitter, and GitHub all use single page architecture.
+
+![Picture did not load](/img/spa_app.png)
+
+Image credit to https://www.scnsoft.com/blog/web-application-architecture#key-terms
 
 #### - Widget Web Applications
 Similar to Single Page Apps that save the hassle of having to reload the entire page each time an update is made we can 
@@ -30,17 +45,28 @@ also see Widget Web Applications. Here each page or service is separated into wi
 these same widgets are able to receive and update their data without having to reload the entire page. 
 Since the services are seperated into separate components they offer a high degree of modularity and usability. The
 widgets can be added deleted or modified depending on the need and usage of the application without affecting other components
-in its ecosystem.
+in its ecosystem. 
+
+DuckDuckGO, some weather websites, and my yahoo are examples of some websites that use this architecture.
+
+![Picture did not load](/img/widget_app.png)
+
+Image credit to https://www.scnsoft.com/blog/web-application-architecture#key-terms
+
 
 #### - Serverless Architecture
 Often referred to as Serverless Computing or FaaS (Function as a Service) Serverless Architecture is cloud computing. Providers
 of the cloud structure handle the infrastructure, servers, and server related tasks, allowing developers to focus solely
 on the application coding and development.
 
+Nordstrom, Yelp, and Slack aare all web application known to use this service.
+
 #### - Microservices
 While Widget Web Apps focus on the user interface Microservices are more inclined towards backend services and capabilities.
 The idea is to separate each service independently, able to be deployed anywhere and even being able to run on distinct languages
 and distinct databases.
+
+LinkedIn, Spotify, and Amazon among many other known web applications employ this architecture.
 
 #### - Progressive Web Applications
 Progressive web applications have the primary goal of providing a user experience similar to that of a platform specific
@@ -48,11 +74,18 @@ app ,being usable on any browser and having a responsive web design.
 In regard to its use on any browser it uses the concept of Progressive Enhancement whereby the application can adapt it
 functionality based on the capabilities of the browser.
 
+Pinterest, Uber, and AliExpress use this architecture.
+
 ## Browser Code Execution Mechanisms
 
 ### How is code executed in a browser?
 A browser is the primary tool of a user to access and display web pages. Browser have the ability to execute JavaScript
-thanks to their JavaScript engine. The code can be executed depending on certain conditions or triggers:
+thanks to their JavaScript engine. After the DOM model is created and the CCSOM has been applied the engine can begin to
+execute JS code based on its location. The code can be executed depending on certain conditions or triggers:
+
+![Picture did not load](/img/browser_execution.webp)
+
+Image thanks to https://medium.com/tech-desk/browsers-and-their-working-mechanisms-33a6a6e3a681
 
 #### - Triggers
 - **During page load** - In the <head> tag where it is executed before the page is rendered or in the <body> tag where it is executed as the page
@@ -74,6 +107,10 @@ All major browsers strive to be compliant with standards set by both the W3C (Wo
 (Web Hypertext Application Technology). This helps ensure that they maintain a high level of compatibility and can support 
 the latest features of HTML, CSS, and JavaScript. However, there are still differences between the browsers that could 
 lead to compatability issues. 
+
+![Picture did not load](/img/web_compatability.png)
+
+Image thanks to http://davincisdk.blogspot.com/2013/11/html5-browser-support.html
 
 #### - Possible compatability issues
 - **JS APIs** - Browsers can differ on the level of support they have for certain APIs. If the application depends on these
@@ -121,7 +158,7 @@ interpreted you wouldn't have to first compile the entire application to test th
 - Scripting languages lend themselves to repetitive tasks
 - Performing one-off tasks
 - Creating dynamic web pages
-- 
+
 #### - Traditional Programming Languages
 - Strict typing lends to having fewer runtime errors and a more reliable code
 - Compiled code leads to faster execution
@@ -176,6 +213,36 @@ group together to form web components. With these web components developers and 
 particular behavior adn styling. This helps promote component based architecture leading to more modular and maintainable 
 web applications
 
+### JavaScript Code Integration Example
+
+```
+<script src="/js/js.js"></script>
+  <head>
+	<meta enctype="utf-8">
+	<title>Cuenta Atras</title>
+	<script>
+
+		// 
+		function marchaAtras() {
+			// Esta instrucci�n ejecuta c�digo condicional.
+			// La parte del 'if' si se cumple la condici�n y 
+			// la del 'else' si no se cumple.
+			if(n>0) n = n-1;
+				else n = 9;
+			// Cambiamos parte de la p�gina usando DOM
+			document.getElementById("cuenta").src = n + ".png";
+		}
+	</script>
+  </head>
+<body onload="cuentaAtras()">
+	<div id="numeros">
+		<img src="9.png" id="cuenta">
+	</div>
+</body>
+```
+
+Here we can see JS being inserted into our HTML both as an external file and an internal script.
+
 ## Programming Tools
 
 Thankfully things have advanced and developers don't have to make entire applications through the command console alone. 
@@ -208,12 +275,21 @@ the DOM structure in real time to keep track of changes and effects.
 ## Bibliography
 
 Web Application Architecture - https://contentsnare.com/web-application-architecture/
+
 Web Application Architecture - https://kinsta.com/es/blog/arquitectura-aplicaciones-web/#tipos-de-arquitectura-de-aplicaciones-web
+
 Web Application Architecture - https://www.scnsoft.com/blog/web-application-architecture#key-terms
+
 Web Application Architecture - https://www.clickittech.com/devops/web-application-architecture/
+
 Web Application Architecture - https://thinksys.com/development/web-application-architecture-complete-guide/
+
 Browser Code Execution - https://medium.com/tech-desk/browsers-and-their-working-mechanisms-33a6a6e3a681
+
 Browser Compatability - https://www.omniconvert.com/what-is/browser-compatibility/
+
 Scripting Languages vs Traditional Languages - https://www.unosquare.com/blog/scripting-and-programming-languages-differences-advantages-and-optimal-use-cases/
+
 Client-Side Web Technologies - https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-client-side-web-technologies
+
 Client-Side Web Technologies - https://docs.oracle.com/cd/E13218_01/wlp/docs102/clientdev/ria.html
