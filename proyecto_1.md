@@ -293,3 +293,5 @@ Scripting Languages vs Traditional Languages - https://www.unosquare.com/blog/sc
 Client-Side Web Technologies - https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-client-side-web-technologies
 
 Client-Side Web Technologies - https://docs.oracle.com/cd/E13218_01/wlp/docs102/clientdev/ria.html
+
+Author - Maurice Darner
